@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Me amás? ❤️</title>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .caja {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 25px #0002;
+    }
+
+    h1 {
+      color: #ff4081;
+    }
+
+    select {
+      padding: 12px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #mensaje {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 25px;
+      color: #ff4081;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="caja">
+    <h1>❤️ ¿Me amás? ❤️</h1>
+
+    <select onchange="responder(this.value)">
+      <option value="">Elegí una respuesta</option>
+      <option value="si">Sí ❤️</option>
+      <option value="no">No 💔</option>
+    </select>
+
+    <p id="mensaje"></p>
+  </div>
+
+  <script>
+    function responder(respuesta) {
+      let mensaje = document.getElementById("mensaje");
+
+      if (respuesta === "si") {
+        mensaje.textContent = "Gracias mi bb ❤️🥰";
+      } else if (respuesta === "no") {
+        mensaje.textContent = "Anda cagar puta 😡";
+      } else {
+        mensaje.textContent = "";
+      }
+    }
+  </script>
+</body>
+</html>
